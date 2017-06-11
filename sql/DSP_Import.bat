@@ -29,13 +29,13 @@ REM ============================================================================
 REM =============================================================================
 
 ECHO Creating Database dspdb
-"c:\program files\mysql\mysql server 5.6\bin\mysqladmin"-h localhost -u root -pMYSQLPASS DROP dspdb
+"c:\program files\mysql\mysql server 5.6\bin\mysqladmin"-h localhost -u root -pNecromancer1 dspdb
 
 ECHO Creating Database dspdb
-"c:\program files\mysql\mysql server 5.6\bin\mysqladmin"-h localhost -u root -pMYSQLPASS CREATE dspdb
+"c:\program files\mysql\mysql server 5.6\bin\mysqladmin"-h localhost -u root -pNecromancer1 CREATE dspdb
 
 ECHO Loading dspdb tables into the database
 cd c:\darkstar\sql
-FOR %%X IN (*.sql) DO ECHO Importing %%X & "c:\program files\mysql\mysql server 5.6\bin\mysql" dspdb -h localhost -u root -pMYSQLPASS < %%X
+FOR %%X IN (*.sql) DO ECHO Importing %%X & "c:\program files\mysql\mysql server 5.6\bin\mysql" dspdb -h localhost -u root -pNecromancer1 < %%X
 
 ECHO Finished!
